@@ -31,10 +31,10 @@ data_distribution_inc = train_df.describe(include=['O'])
 # Numerical features
 
 
-
-
-
-
+pclass_survive = train_df[['Pclass', 'Survived']].groupby(['Pclass'], as_index=False).mean().sort_values(by='Survived', ascending=False)
+sex_survive = train_df[["Sex", "Survived"]].groupby(['Sex'], as_index=False).mean().sort_values(by='Survived', ascending=False)
+sibsp_survive = train_df[["SibSp", "Survived"]].groupby(['SibSp'], as_index=False).mean().sort_values(by='Survived', ascending=False)
+parch_survive = train_df[["Parch", "Survived"]].groupby(['Parch'], as_index=False).mean().sort_values(by='Survived', ascending=False)
 # Mixed Features
 
 
